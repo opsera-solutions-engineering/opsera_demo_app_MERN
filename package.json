@@ -1,5 +1,5 @@
 {
-  "name": "Opsera Demo App - MERN",
+  "name": "opsera_demo_app_MERN",
   "version": "1.0.0",
   "description": "Demo Social network for developers using Opsera",
   "main": "server.js",
