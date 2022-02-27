@@ -4,3 +4,4 @@ Dockerfile
 npm-debug.log
 client/node_modules
 client/build
+config/default.json
