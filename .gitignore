@@ -4,3 +4,4 @@ client/node_modules
 client/build
 config/*.json
 notes.txt
+client/tests/allure-*
