@@ -8,6 +8,7 @@ describe("Sign-In Flows -- ", () => {
         const heading = await $('#root > section > h1')
         
         //Access Home page and take screenshot
+        //TODO: Set an environment variable to provide the base URL based on the deployment environment
         await browser.url('http://localhost:3000/')
         await browser.takeScreenshot()
         
