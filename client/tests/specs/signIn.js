@@ -9,7 +9,7 @@ describe("Sign-In Flows -- ", () => {
         
         //Access Home page and take screenshot
         //TODO: Set an environment variable to provide the base URL based on the deployment environment
-        await browser.url('http://localhost:3000/')
+        await browser.url('http://localhost:5000/')
         await browser.takeScreenshot()
         
         //Access Sign-In screen
