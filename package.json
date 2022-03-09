@@ -1,33 +1,44 @@
 {
-  "name": "opsera_demo_app_MERN",
-  "version": "1.0.0",
-  "description": "Demo Social network for developers using Opsera",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server",
-    "server": "nodemon server",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "prod-build": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
-    "prod-serve": "NODE_ENV=production node server.js",
-    "docker-build":  "docker build -t opsera_solutions_engineering/opsera-mern-demo-app ."
-  },
-  "author": "Brad Traversy",
-  "license": "MIT",
-  "dependencies": {
-    "axios": "^0.21.0",
-    "bcryptjs": "^2.4.3",
-    "client": "file:client",
-    "config": "^3.3.3",
-    "express": "^4.17.1",
-    "express-validator": "^6.8.1",
-    "gravatar": "^1.8.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.11.8",
-    "normalize-url": "^5.3.0"
-  },
-  "devDependencies": {
-    "concurrently": "^5.3.0",
-    "nodemon": "^2.0.6"
-  }
+    "name": "opsera_demo_app_MERN",
+    "version": "1.0.0",
+    "description": "Demo Social network for developers using Opsera",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server",
+        "server": "nodemon --ignore client/tests server",
+        "client": "npm start --prefix client",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "prod-build": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+        "prod-serve": "NODE_ENV=production node server.js",
+        "docker-build": "docker build -t opsera_solutions_engineering/opsera-mern-demo-app .",
+        "wdio": "wdio run wdio.conf.js",
+        "allure": "allure generate client/tests/allure-results -o client/tests/allure-reports --clean && allure open client/tests/allure-reports",
+        "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner -Dproject.settings=sonar-project.properties"
+    },
+    "author": "Brad Traversy",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^0.21.0",
+        "bcryptjs": "^2.4.3",
+        "client": "file:client",
+        "config": "^3.3.3",
+        "express": "^4.17.1",
+        "express-validator": "^6.8.1",
+        "gravatar": "^1.8.1",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.11.8",
+        "normalize-url": "^5.3.0"
+    },
+    "devDependencies": {
+        "@wdio/allure-reporter": "^7.16.14",
+        "@wdio/cli": "^7.16.16",
+        "@wdio/jasmine-framework": "^7.16.14",
+        "@wdio/local-runner": "^7.16.16",
+        "@wdio/spec-reporter": "^7.16.14",
+        "chromedriver": "^98.0.1",
+        "concurrently": "^5.3.0",
+        "nodemon": "^2.0.6",
+        "sonar-scanner": "^3.1.0",
+        "wdio-chromedriver-service": "^7.2.8"
+    }
 }
