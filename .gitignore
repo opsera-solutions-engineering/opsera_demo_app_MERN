@@ -5,3 +5,6 @@ client/build
 config/*.json
 notes.txt
 client/tests/allure-*
+.scannerwork
+logs
+sonar-project.properties
