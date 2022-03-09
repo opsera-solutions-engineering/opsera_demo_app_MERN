@@ -12,7 +12,8 @@
         "prod-serve": "NODE_ENV=production node server.js",
         "docker-build": "docker build -t opsera_solutions_engineering/opsera-mern-demo-app .",
         "wdio": "wdio run wdio.conf.js",
-        "allure": "allure generate client/tests/allure-results -o client/tests/allure-reports --clean && allure open client/tests/allure-reports"
+        "allure": "allure generate client/tests/allure-results -o client/tests/allure-reports --clean && allure open client/tests/allure-reports",
+        "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner -Dproject.settings=sonar-project.properties"
     },
     "author": "Brad Traversy",
     "license": "MIT",
@@ -37,6 +38,7 @@
         "chromedriver": "^98.0.1",
         "concurrently": "^5.3.0",
         "nodemon": "^2.0.6",
+        "sonar-scanner": "^3.1.0",
         "wdio-chromedriver-service": "^7.2.8"
     }
 }
