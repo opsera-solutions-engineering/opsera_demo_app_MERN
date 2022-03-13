@@ -20,6 +20,7 @@ COPY . .
 
 ## Set env vars
 ENV NODE_ENV=production
+ENV SUPPRESS_NO_CONFIG_WARNING="y"
 
 EXPOSE 5000
 EXPOSE 27017

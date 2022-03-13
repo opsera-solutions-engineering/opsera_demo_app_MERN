@@ -11,6 +11,7 @@
         "prod-build": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
         "prod-serve": "NODE_ENV=production node server.js",
         "docker-build": "docker build -t opsera_solutions_engineering/opsera-mern-demo-app .",
+        "docker-run": "docker run -p 5000:5000 --env MONGO_URI=$MONGO_URL --env JWT_SECRET=$JWT_SECRET --env GH_TOKEN=$GH_TOKEN opsera_solutions_engineering/opsera-mern-demo-app",
         "wdio": "wdio run wdio.conf.js",
         "allure": "allure generate client/tests/allure-results -o client/tests/allure-reports --clean && allure open client/tests/allure-reports",
         "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner -Dproject.settings=sonar-project.properties"
