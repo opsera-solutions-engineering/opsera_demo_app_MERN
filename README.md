@@ -6,14 +6,12 @@ This MERN stack application from the "MERN Stack Front To Back" course on [Udemy
 
 # Quick Start 🚀
 
-### Add a default.json file in config folder with the following
+### Set your configuration environent variables
 
-```json
-{
-  "mongoURI": "<your_mongoDB_Atlas_uri_with_credentials>",
-  "jwtSecret": "secret",
-  "githubToken": "<yoursecrectaccesstoken>"
-}
+```
+  MONGO_URI="<your_mongoDB_Atlas_uri_with_credentials>",
+  JWT_SECRET="secret",
+  GH_TOKEN="<yoursecrectaccesstoken>"
 ```
 
 ### Install server dependencies
